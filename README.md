@@ -38,7 +38,9 @@ Debe crear una cuenta en github y un repositorio público con el contenido de es
 
 Los test ya fueron creados, debe crear las clases que representan las entidades del dominio (ejemplo: Carta, Mano, etc) y los métodos para evaluar el problema según se indicó anteriormente.
 
-Debe implementar **solo** 5 de las 10 validaciones, debe indicar cuáles de las 5 seleccione.
+Debe implementar **solo** 5 de las 10 validaciones, debe indicar cuáles de las 5 selecciono.
+
+Tambien debe implementar los test con los casos mensionados en la descripcion segun las validaciones que escoja.
 
 Se evaluará:
 - Estilo de codificación.
