@@ -5,11 +5,40 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.DisplayName;
 
+import java.util.List;
+
 class PokerTest {
     @DisplayName("Blanco: 2H 3D 5S 9C KD  Negro: 2C 3H 4S 8C AH Negro gana. - con la carta alta: As ")
     @Test
     void testCartaAlta() {
-        fail("no implementado");
+
+        //given
+        PokerHand blanco = PokerHand.of("2H 3D 5S 9C KD");
+        PokerHand negro = PokerHand.of("2C 3H 4S 8C AH");
+        Poker poker = new Poker();
+
+        //then
+        WinnerRound winnerRound = poker.playRound(blanco, negro);
+
+
+        //when
+        boolean ganaNegro = !winnerRound.isFirstWin();
+        assertFalse(ganaNegro);
+
+        final WinnerHandType actualWinnerHandType = winnerRound.getWinnerHandType();
+        final WinnerHandType expectedWinnerHandType = WinnerHandType.CARTA_ALTA;
+        assertEquals(expectedWinnerHandType,actualWinnerHandType);
+
+        final List<String> compositionWinnerHand = winnerRound.getCompositionWinnerHand();
+        final int actualSizeComposition = compositionWinnerHand.size();
+        final int expectedSizeComposition = 1;
+        assertEquals(expectedSizeComposition, actualSizeComposition);
+
+
+        final String actualResultado = compositionWinnerHand.get(0);
+        final String expectedResultado = "As";
+        assertEquals(expectedResultado, actualResultado);
+
     }
 
     @DisplayName("Blanco: 2H 3D 5S 9C KD  Negro: 2C 3H 4S 8C 2C Blanco gana. - con la carta alta: Rey ")
