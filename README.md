@@ -42,7 +42,7 @@ Debe implementar **solo** 5 de las 10 validaciones, debe indicar cuáles de las 
 
 Tambien debe implementar los test con los casos mensionados en la descripcion segun las validaciones que escoja.
 
-Se evaluará:
+## Se evaluará:
 - Estilo de codificación.
 - Diseño de los módulos y las clases.
 - Lógica de la implementación.
@@ -50,5 +50,11 @@ Se evaluará:
 - Que pasen los test asociados a los casos que seleccionó.
 - Se da un plus si crea nuevos test
 - Se da un plus si implementa más de las 5 validaciones, pero solo si funcionan todas las que implemente.
+- Se da un plus si implementa la estructura del juego de una manera distinta (Es decir que no utilizar las clases que se entregan, por ejemplo PokerHand, WinnerRound, etc).
+
+## Comando cor
+```bash
+  mvn test
+``
 
 
