@@ -13,4 +13,11 @@ public enum SuitType {
 		this.suit = suit;
 	}
 
+	public String getSuit() {
+		return suit;
+	}
+
+	public void setSuit(String suit) {
+		this.suit = suit;
+	}
 }

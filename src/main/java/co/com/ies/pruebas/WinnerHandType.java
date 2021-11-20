@@ -9,4 +9,12 @@ public enum WinnerHandType {
     WinnerHandType(String desc) {
         this.desc = desc;
     }
+
+	public String getDesc() {
+		return desc;
+	}
+
+	public void setDesc(String desc) {
+		this.desc = desc;
+	}    
 }
